@@ -1,11 +1,15 @@
 #include<iostream>
 using namespace std;
+
+// Defining the node structure
 struct Node{
-	int data;
-	Node* next;
+	int data; // the interger data will go here
+	Node* next; // the address of the next node
 };
+
 Node* createList(int values[], int size){
-	Node *head= new Node{ values[0], nullptr};
+	
+	Node *head= new Node{ values[0], nullptr}; 
 	Node* current= head;
 	
 	for (int i=1; i<size; i++){
@@ -14,13 +18,20 @@ Node* createList(int values[], int size){
 	}
 	return head;
 }
+
+// the function for printing nodes
 void printList(Node *head){
 	cout<<"The values in this linked list are "<<endl;
 	while(head!=NULL){
 	cout<<head->data<<endl;
-	head=head->next;
-	}};
+	head=head->next; // making the current address as the next address
+	}
+};
+
+// The main function
 int main(){
+	
+	// The user insert the number to the size 
 	int size;
 	cout<<"Enter the required  size of Node "<<endl;
 	cin>>size;
@@ -32,6 +43,8 @@ int main(){
 		cout<<"Enter element "<<i+1<<endl;
 		cin>>values[i];
 	}
+
+	// Linkedlist is created
 	Node* myList=createList(values,size);
 	printList(myList);
 }
