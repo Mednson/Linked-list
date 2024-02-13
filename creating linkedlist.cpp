@@ -1,9 +1,11 @@
+// its nell bro
 #include<iostream>
 using namespace std;
 struct Node{
 	int data;
 	Node* next;
 };
+// create new node
 Node* createList(int values[], int size){
 	Node *head= new Node{ values[0], nullptr};
 	Node* current= head;
@@ -20,6 +22,7 @@ void printList(Node *head){
 	cout<<head->data<<endl;
 	head=head->next;
 	}};
+//main function 
 int main(){
 	int size;
 	cout<<"Enter the required  size of Node "<<endl;
